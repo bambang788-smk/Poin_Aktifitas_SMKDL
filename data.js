@@ -1543,19 +1543,19 @@ const MASTER_DATA = {
         "nama": "Yuzzi Tirta Zakiah, S.Pd",
         "role": "Wali Kelas"
     }
-  ]
+  ],
   kelas: [
-    	"X AKL 1",
-	"X AKL 2",
-	"X BDP",
-	"X DKV",
-	"XI AKL",
-	"XI BDP",
-	"XI DKV",
-	"XII AKL 1",
-	"XII AKL 2",
-	"XII BDP",
-	"XII DKV"
+    "X AKL 1",
+    "X AKL 2",
+    "X BDP",
+    "X DKV",
+    "XI AKL",
+    "XI BDP",
+    "XI DKV",
+    "XII AKL 1",
+    "XII AKL 2",
+    "XII BDP",
+    "XII DKV"
   ],
   siswa: {
     "X AKL 1": [
@@ -1851,7 +1851,6 @@ const MASTER_DATA = {
     {"keterangan": "36. Bertindik selain di telinga atau lebih dari dua dan atau bertato permanen bagi putri","poin": -50},
     {"keterangan": "37. Bertindik bagi putra dan atau bertato permanen","poin": -50},
     {"keterangan": "38. Tidak masuk PKL tanpa ijin","poin": -8}
-]
   ],
   prestasi: [
     {"keterangan": "1. Mendapat Nilai Penilaian Sumatif tertinggi pada lebih dari 5 mata pelajaran","poin": 25},
@@ -1909,5 +1908,5 @@ const MASTER_DATA = {
     {"keterangan": "53. Membuat Resensi buku (maksimal 1 resensi per bulan)","poin": 15},
     {"keterangan": "54. Menjadi Petugas/Pengisi acara kegiatan sekolah (Kerohanian, Perpisahan, Event)","poin": 15},
     {"keterangan": "55. Kelas mendapatkan penghargaan Mading terbaik","poin": 8}
-]
+  ]
 };
