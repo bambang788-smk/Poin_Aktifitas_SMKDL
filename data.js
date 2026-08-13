@@ -1544,7 +1544,6 @@ const MASTER_DATA = {
         "role": "Wali Kelas"
     }
   ]
-};
   kelas: [
     	"X AKL 1",
 	"X AKL 2",
