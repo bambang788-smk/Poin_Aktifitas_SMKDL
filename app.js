@@ -14,9 +14,6 @@ function handleLogin(e) {
   // Cari user di MASTER_DATA.users
   const userFound = MASTER_DATA.users.find(user => user.username === u && user.password === p);
 
-  btn.disabled = false;
-  btn.innerText = 'Login';
-
   if (userFound) {
     currentUser = {
       username: userFound.username,
@@ -24,9 +21,29 @@ function handleLogin(e) {
       role: userFound.role
     };
     localStorage.setItem('user_session', JSON.stringify(currentUser));
+    
+    // Panggil fungsi setup UI dashboard
     setupDashboard();
   } else {
+    btn.disabled = false;
+    btn.innerText = 'Login';
     errDiv.innerText = 'Username atau Password salah!';
     errDiv.classList.remove('hidden');
+  }
+}
+
+// TAMBAHKAN FUNGSI INI di app.js agar tidak ReferenceError
+function setupDashboard() {
+  // 1. Sembunyikan Form Login & Tampilkan Main Dashboard
+  const loginSection = document.getElementById('login-section') || document.getElementById('login-card');
+  const mainApp = document.getElementById('main-app') || document.getElementById('dashboard-section');
+  
+  if (loginSection) loginSection.classList.add('hidden');
+  if (mainApp) mainApp.classList.remove('hidden');
+
+  // 2. Tampilkan Nama User di Header (jika ada elemennya)
+  const userDisplay = document.getElementById('user-display-name');
+  if (userDisplay && currentUser) {
+    userDisplay.innerText = `${currentUser.nama} (${currentUser.role})`;
   }
 }
