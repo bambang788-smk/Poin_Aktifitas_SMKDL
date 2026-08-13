@@ -22,28 +22,12 @@ function handleLogin(e) {
     };
     localStorage.setItem('user_session', JSON.stringify(currentUser));
     
-    // Panggil fungsi setup UI dashboard
-    setupDashboard();
+    // Redirect langsung ke file dashboard
+    window.location.href = 'dashboard.html'; // Sesuaikan nama file dashboard Anda
   } else {
     btn.disabled = false;
     btn.innerText = 'Login';
     errDiv.innerText = 'Username atau Password salah!';
     errDiv.classList.remove('hidden');
-  }
-}
-
-// TAMBAHKAN FUNGSI INI di app.js agar tidak ReferenceError
-function setupDashboard() {
-  // 1. Sembunyikan Form Login & Tampilkan Main Dashboard
-  const loginSection = document.getElementById('login-section') || document.getElementById('login-card');
-  const mainApp = document.getElementById('main-app') || document.getElementById('dashboard-section');
-  
-  if (loginSection) loginSection.classList.add('hidden');
-  if (mainApp) mainApp.classList.remove('hidden');
-
-  // 2. Tampilkan Nama User di Header (jika ada elemennya)
-  const userDisplay = document.getElementById('user-display-name');
-  if (userDisplay && currentUser) {
-    userDisplay.innerText = `${currentUser.nama} (${currentUser.role})`;
   }
 }
